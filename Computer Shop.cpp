@@ -5,8 +5,10 @@
 void main()
 {
 	char name[31];
+	char persen;
 	int q, a, harga, ram, vga;
 	long int total = 0, pay, disk, change;
+	persen = '%';
 
 	printf("\n\t\t\t\t========================\n");
 	printf("\t\t\t\t|| %c%c%c 1701313990 %c%c%c ||\n", 6,3,5,5,3,6);
@@ -50,7 +52,7 @@ void main()
 
 	printf("\n\nTotal price of all items is Rp. %ld", total);
 	disk = total * 0.9;
-	printf("\nDiscount = 10%, New Total Price = Rp. %ld", disk);
+	printf("\nDiscount = 10%c, New Total Price = Rp. %ld", persen, disk);
 	do
 	{
 		printf("\nInput payment [min %ld] : ", disk);
