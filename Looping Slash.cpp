@@ -10,8 +10,11 @@ void main()
 	printf("\t\t\t\t========================\n\n\n");
 
 	int x=0, y, a;
-	printf("Input jarak [5..15]: ");
-	scanf("%d", &a); fflush(stdin);
+	do
+	{
+		printf("Input jarak [5..15]: ");
+		scanf("%d", &a); fflush(stdin);
+	}while(a < 5 || a > 15);
 	while (x < 25)
 	{
 		for (y=1; y <= 79; y++)
