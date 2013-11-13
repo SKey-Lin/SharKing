@@ -44,6 +44,7 @@ void main()
 		{
 			speed[i] = rand()%15+25;
 		}
+
 		system("cls");
 		printf("\n\n\n\nAvailable Horse :");
 		printf("\n*-*-*-*-*-*-*-*-*-*");
@@ -81,6 +82,7 @@ void main()
 			scanf("%s", &sure); fflush(stdin);
 		}while(strcmpi(sure, "y") != 0 && strcmpi(sure,"n") != 0);
 	}while(strcmpi(sure, "n") == 0);
+
 	max = 0;
 	for(i=1;i<=10;i++)
 	{
