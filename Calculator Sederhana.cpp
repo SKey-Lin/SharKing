@@ -10,13 +10,13 @@ int main()
         printf("\t\t\t\t========================\n\n\n");
 
         double bil8, bil9, bil6, bil10, bil11;
-        long long int bil3, bil4, bil5, bil1, bil2, bil7, bil12, bil13, bil14, bil15, bil16, bil17;
+        long int bil3, bil4, bil5, bil1, bil2, bil7, bil12, bil13, bil14, bil15, bil16, bil17;
         printf("Masukan bilangan pertama: ");
         scanf("%ld", &bil1); fflush(stdin);
         printf("Masukan bilangan kedua: ");
         scanf("%ld", &bil2); fflush(stdin);
         bil3 = bil1 + bil2;
-        printf("\n\nHasil penjumlahannya adalah: %ld\n", bil3);
+        printf("\nHasil penjumlahannya adalah: %ld\n", bil3);
         if (bil1 > bil2)
                 {
                         bil4 = bil1 - bil2;
@@ -63,14 +63,14 @@ int main()
         printf("%ld kuadrat adalah: %ld\n", bil2, bil13);
         
         bil14 = pow(bil8, bil8);
-        printf("\n%ld pangkat %lld adalah %ld", bil1, bil1, bil14);
+        printf("\n%ld pangkat %ld adalah %ld", bil1, bil1, bil14);
         bil15 = pow(bil9, bil9);
-        printf("\n%ld pangkat %lld adalah %ld", bil2, bil2, bil15);
+        printf("\n%ld pangkat %ld adalah %ld", bil2, bil2, bil15);
 
         bil16 = pow(bil8, bil9);
-		printf("\n\n%ld pangkat %lld adalah %ld", bil1, bil2, bil16);
+		printf("\n\n%ld pangkat %ld adalah %ld", bil1, bil2, bil16);
 		bil17 =  pow(bil9, bil8);
-        printf("\n%ld pangkat %lld adalah %ld", bil2, bil1, bil17);
+        printf("\n%ld pangkat %ld adalah %ld", bil2, bil1, bil17);
 
         getchar();
         return 0;
