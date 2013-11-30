@@ -1,0 +1,73 @@
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+void main()
+{
+        printf("\t\t\t\t========================\n");
+        printf("\t\t\t\t|| %c%c%c 1701313990 %c%c%c ||\n", 6,3,5,5,3,6);
+        printf("\t\t\t\t||         **         ||\n");
+        printf("\t\t\t\t||  %c   SharKing   %c  ||\n", 6,6);
+        printf("\t\t\t\t========================");
+        
+		char answer[10], c[10];
+		int n, a[100], b[100]={0,0,0,0,0,0,0,0,0,0}, i, x;
+		double m;
+		while(1)
+		{
+		printf("\n\nChoose: ");
+		printf("\nA. Decimal to Binery.");
+		printf("\nB. Binery to Decimal.\n");
+        do
+		{
+			printf("Answer[A/B/Dec2Bin/Bin2Dec/1/2]: ");
+			scanf("%s", &answer); fflush(stdin);
+		}while(strcmpi(answer, "A") != 0 && strcmpi(answer, "B") != 0 && strcmpi(answer, "Dec2Bin") != 0 && strcmpi(answer, "Bin2Dec") != 0 && strcmpi(answer, "1") != 0 && strcmpi(answer, "2") != 0 && strcmpi(answer, "0") != 0);
+		if(strcmpi(answer, "0") == 0) break;
+		if(strcmpi(answer, "A") == 0 || strcmpi(answer, "1") == 0 || strcmpi(answer, "Dec2Bin") == 0)
+		{
+			printf("\nInput Decimal: ");
+			scanf("%d", &n); fflush(stdin);
+			a[0]=n;
+			for(i=0; a[i]!=0; i++)
+			{
+				a[i+1]=a[i]/2;
+				b[i]=a[i]%2;
+				x=i;
+			}
+			printf("Result: ");
+			for(i=0; i<8; i++)
+			{
+				printf("%d", b[7-i]);
+			}
+		}
+		else
+		{
+			x=0;
+			printf("\n");
+			do
+			{
+				a[0] = 0;
+				printf("Input Binery: ");
+				scanf("%s", &c); fflush(stdin);
+				for(i=0;i<8; i++)
+				{
+					if(c[i] != '1' && c[i] != '0')
+					{
+						a[0]=1;
+					}
+				}
+			}while(a[0] == 1 || strlen(c) > 8);
+			for(i=0;i<8; i++)
+			{
+				if(c[i]=='1')
+				{
+					m=i;
+					n= pow(2, (7-m));
+					x+=n;
+				}
+			}
+			printf("Result: %d\n", x);
+		}
+		}
+		getchar();
+}
