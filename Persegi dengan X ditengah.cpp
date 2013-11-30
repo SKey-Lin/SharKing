@@ -9,7 +9,7 @@ void main()
 	printf("\t\t\t\t||  %c   SharKing   %c  ||\n", 6,6);
 	printf("\t\t\t\t========================\n\n\n");
 
-	int x, j, i,a=2,b=1;
+	int x, j, i;
 	printf("Input panjang & lebar persegi: ");
 	scanf("%d", &x); fflush(stdin);
 
@@ -17,15 +17,9 @@ void main()
 	{
 		for(j=1; j<=x; j++)
 		{
-			if(j==1|| j==x || i==1 || i==x || j==i)
+			if(j==1|| j==x || i==1 || i==x || j==i || j+i==x+1)
 			{	
 				printf("*");
-			}
-			else if(i==a && j==x-b)
-			{
-				printf("*");
-				a++;
-				b++;
 			}
 			else
 			{
