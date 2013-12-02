@@ -11,6 +11,7 @@ void main()
 
 	char kalimat[100];
 	int i, j, n=0, a=0;
+	kalimat[0]=0;
 	printf("Masukan Kalimat: ");
 	scanf("%[^\n]s", &kalimat); fflush(stdin);
 
