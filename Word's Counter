@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<ctype.h>
+
+void main()
+{
+	printf("\t\t\t\t========================\n");
+	printf("\t\t\t\t|| %c%c%c 1701313990 %c%c%c ||\n", 6,3,5,5,3,6);
+	printf("\t\t\t\t||         **         ||\n");
+	printf("\t\t\t\t||  %c   SharKing   %c  ||\n", 6,6);
+	printf("\t\t\t\t========================\n\n\n");
+
+	int i, j, len, counter;
+	char kalimat[100];
+	while(1)
+	{
+	counter=0;
+	kalimat[0]=0;
+	printf("\nInput sentences:");
+	scanf("%[^\n]s", &kalimat); fflush(stdin);
+	for(len=0;kalimat[len] != 0; len++)
+	{}
+	for(i=0; i<len; i++)
+	{
+		if(isalnum(kalimat[i]))
+		{
+			counter++;
+			for(j=i; ;j++)
+			{
+				if(kalimat[j] == 0) break;
+				else if(kalimat[j] == 32 && isalnum(kalimat[j+1]))
+				{
+					counter++;
+				}
+			}
+			break;
+		}
+	}
+	
+	printf("The word is %d", counter);
+	}
+	getchar();
+}
